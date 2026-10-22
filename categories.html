@@ -1,16 +1,199 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Our Flavours | Sweet Scoop</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head>
-<body><div class="announcement">A little scoop of happiness, delivered to your door 🍦</div><header class="site-header"><a class="logo" href="index.html"><span class="logo-mark">✿</span> sweet<span>scoop</span></a><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button><nav class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a class="active" href="categories.html">Flavours</a><a href="contact.html">Contact</a><a class="nav-cta" href="contact.html">Ask us <span>↗</span></a></nav></header>
-<main><section class="page-hero compact-hero section-wrap"><p class="eyebrow">THE FLAVOUR CLUB</p><h1>Find your kind of <em>happy.</em></h1><p>From timeless classics to extra-special treats, there is a scoop for every mood.</p></section>
-<section class="catalog section-wrap"><div class="filter-row" role="group" aria-label="Filter flavours"><button class="filter-btn active" data-filter="all">All scoops</button><button class="filter-btn" data-filter="classic">Classics</button><button class="filter-btn" data-filter="fruity">Fruity</button><button class="filter-btn" data-filter="chocolate">Chocolate lovers</button></div>
-<div class="catalog-grid">
-<article class="catalog-card" data-category="fruity"><div class="catalog-image pink-bg"><img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=700&q=85" alt="Berry ice cream cone"></div><div class="catalog-info"><div><h3>Berry Blush</h3><p>Fresh strawberry · Creamy finish</p><span class="flavour-type">FRUITY FAVOURITE</span></div><strong>₹99</strong></div></article>
-<article class="catalog-card" data-category="classic"><div class="catalog-image yellow-bg"><img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?auto=format&fit=crop&w=700&q=85" alt="Vanilla ice cream cone"></div><div class="catalog-info"><div><h3>Vanilla Cloud</h3><p>Vanilla bean · Smooth and mellow</p><span class="flavour-type">TIMELESS CLASSIC</span></div><strong>₹89</strong></div></article>
-<article class="catalog-card" data-category="chocolate"><div class="catalog-image purple-bg"><img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&fit=crop&w=700&q=85" alt="Chocolate ice cream"></div><div class="catalog-info"><div><h3>Choco Dream</h3><p>Rich cocoa · Chocolate pieces</p><span class="flavour-type">CHOCOLATE LOVE</span></div><strong>₹109</strong></div></article>
-<article class="catalog-card" data-category="fruity"><div class="catalog-image green-bg"><img src="https://images.unsplash.com/photo-1501446529957-6226bd447c46?auto=format&fit=crop&w=700&q=85" alt="Ice cream cone with fruit"></div><div class="catalog-info"><div><h3>Mango Sunshine</h3><p>Ripe mango · Tropical sweetness</p><span class="flavour-type">FRUITY FAVOURITE</span></div><strong>₹99</strong></div></article>
-<article class="catalog-card" data-category="chocolate"><div class="catalog-image peach-bg"><img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=700&q=85" alt="Assorted scoops including chocolate"></div><div class="catalog-info"><div><h3>Cookie Crumble</h3><p>Cookie bites · Chocolate swirl</p><span class="flavour-type">CHOCOLATE LOVE</span></div><strong>₹119</strong></div></article>
-<article class="catalog-card" data-category="classic"><div class="catalog-image blue-bg"><img src="https://images.unsplash.com/photo-1517093157656-b9ec224e1a0a?auto=format&fit=crop&w=700&q=85" alt="Ice cream sundae"></div><div class="catalog-info"><div><h3>Caramel Hug</h3><p>Golden caramel · Buttery notes</p><span class="flavour-type">TIMELESS CLASSIC</span></div><strong>₹109</strong></div></article>
-</div><p class="catalog-note">Prices and flavours shown are sample content for this website template. Update them to match your shop.</p></section>
-<section class="mini-cta"><h2>Can't choose just one?</h2><p>We completely understand. Send us a message and we'll help you pick.</p><a class="button button-dark" href="contact.html">Let's talk →</a></section></main>
-<footer class="site-footer"><div class="footer-top"><a class="logo" href="index.html"><span class="logo-mark">✿</span> sweet<span>scoop</span></a><p>Small batches. Big smiles. Always a reason to celebrate.</p><div class="social-links"><a href="#">ig</a><a href="#">f</a><a href="#">p</a></div></div><div class="footer-bottom"><span>© <span class="year"></span> Sweet Scoop. Made with love.</span><div><a href="about.html">Our story</a><a href="contact.html">Say hello</a></div></div></footer></body></html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore delicious Sweet Scoop ice cream flavours.">
+  <title>Our Flavours | Sweet Scoop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="announcement">A little scoop of happiness, delivered to your door 🍦</div>
+
+  <header class="site-header">
+    <a class="logo" href="index.html"><span class="logo-mark">✿</span> sweet<span>scoop</span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a class="active" href="categories.html">Flavours</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="contact.html">Get in touch ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <p class="eyebrow">A WORLD OF FLAVOUR</p>
+      <h1>Find your happy <em>scoop.</em></h1>
+      <p>From fruity favourites to chocolate dreams, there is a flavour for every mood.</p>
+    </section>
+
+    <section class="catalogue section-wrap">
+      <div class="filter-buttons" aria-label="Filter ice cream flavours">
+        <button class="filter-btn active" data-filter="all" aria-pressed="true">All Flavours</button>
+        <button class="filter-btn" data-filter="fruit" aria-pressed="false">Fruit</button>
+        <button class="filter-btn" data-filter="classic" aria-pressed="false">Classics</button>
+        <button class="filter-btn" data-filter="chocolate" aria-pressed="false">Chocolate</button>
+      </div>
+
+      <p id="filter-status" class="filter-status" aria-live="polite">Showing all flavours</p>
+
+      <div class="product-grid catalogue-grid">
+        <article class="product-card" data-category="fruit">
+          <div class="product-image pink-bg">
+            <span class="product-badge">BESTSELLER</span>
+            <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=700&q=80" alt="Berry ice cream">
+          </div>
+          <div class="product-info">
+            <div><h3>Berry Blush</h3><p>Fresh strawberry · Cream</p></div>
+            <strong>₹99</strong>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="classic">
+          <div class="product-image yellow-bg">
+            <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?auto=format&fit=crop&w=700&q=85" alt="Vanilla ice cream">
+          </div>
+          <div class="product-info">
+            <div><h3>Vanilla Cloud</h3><p>Vanilla · Creamy milk</p></div>
+            <strong>₹89</strong>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="chocolate">
+          <div class="product-image purple-bg">
+            <span class="product-badge">CHOCOLATE LOVE</span>
+            <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&fit=crop&w=700&q=85" alt="Chocolate ice cream">
+          </div>
+          <div class="product-info">
+            <div><h3>Choco Dream</h3><p>Dark cocoa · Chocolate</p></div>
+            <strong>₹109</strong>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="fruit">
+          <div class="product-image yellow-bg">
+            <img src="https://images.unsplash.com/photo-1501446529957-6226bd447c46?auto=format&fit=crop&w=700&q=85" alt="Colourful ice cream scoops">
+          </div>
+          <div class="product-info">
+            <div><h3>Mango Sunshine</h3><p>Sweet mango · Fruity</p></div>
+            <strong>₹99</strong>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="chocolate">
+          <div class="product-image pink-bg">
+            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=700&q=85" alt="Rich chocolate and cream ice cream">
+          </div>
+          <div class="product-info">
+            <div><h3>Chocolate Swirl</h3><p>Chocolate · Cream</p></div>
+            <strong>₹119</strong>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="classic">
+          <div class="product-image purple-bg">
+            <img src="https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?auto=format&fit=crop&w=700&q=85" alt="Ice cream dessert">
+          </div>
+          <div class="product-info">
+            <div><h3>Cookie Crunch</h3><p>Cookies · Vanilla cream</p></div>
+            <strong>₹119</strong>
+          </div>
+        </article>
+      </div>
+
+      <div class="catalogue-note">
+        <p>💗 Found your favourite?</p>
+        <p>Contact us to ask about flavours and availability.</p>
+        <a class="button button-primary" href="contact.html">Contact Sweet Scoop →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="logo" href="index.html"><span class="logo-mark">✿</span> sweet<span>scoop</span></a>
+        <p>Small batches. Big smiles. Always a reason to celebrate. Bringing happiness to every scoop.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/" aria-label="Instagram">ig</a>
+          <a href="https://www.facebook.com/" aria-label="Facebook">f</a>
+          <a href="https://www.pinterest.com/" aria-label="Pinterest">p</a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="categories.html">Our Flavours</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Popular Flavours</h3>
+        <ul>
+          <li><a href="categories.html">🍓 Strawberry</a></li>
+          <li><a href="categories.html">🍦 Vanilla</a></li>
+          <li><a href="categories.html">🍫 Chocolate</a></li>
+          <li><a href="categories.html">🥭 Mango</a></li>
+        </ul>
+      </div>
+      <div class="footer-column footer-contact">
+        <h3>Get in Touch</h3>
+        <p>Have a sweet question? We'd love to hear from you!</p>
+        <a href="contact.html">Visit our contact page →</a>
+        <p class="footer-highlight">🍨 Happiness is homemade.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span class="year"></span> Sweet Scoop. Made with love 💗</span>
+      <div class="footer-bottom-links">
+        <a href="about.html">Our Story</a>
+        <a href="contact.html">Say Hello</a>
+        <a href="categories.html">Explore Flavours</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Flavour category filters
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const flavourCards = document.querySelectorAll("[data-category]");
+    const filterStatus = document.getElementById("filter-status");
+
+    filterButtons.forEach(function(button) {
+      button.addEventListener("click", function() {
+        const selected = button.dataset.filter;
+        let visibleCount = 0;
+
+        filterButtons.forEach(function(item) {
+          const active = item === button;
+          item.classList.toggle("active", active);
+          item.setAttribute("aria-pressed", String(active));
+        });
+
+        flavourCards.forEach(function(card) {
+          const show = selected === "all" ||
+                       card.dataset.category === selected;
+
+          card.hidden = !show;
+
+          if (show) visibleCount++;
+        });
+
+        filterStatus.textContent =
+          "Showing " + visibleCount + " " +
+          (selected === "all" ? "flavours" : selected + " flavours");
+      });
+    });
+  </script>
+</body>
+</html>

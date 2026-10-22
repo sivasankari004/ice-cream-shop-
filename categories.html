@@ -4,196 +4,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore delicious Sweet Scoop ice cream flavours.">
-  <title>Our Flavours | Sweet Scoop</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <title>Categories | Sweet Scoop</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-
-  <div class="announcement">A little scoop of happiness, delivered to your door 🍦</div>
-
-  <header class="site-header">
-    <a class="logo" href="index.html"><span class="logo-mark">✿</span> sweet<span>scoop</span></a>
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-    <nav class="nav-links" aria-label="Main navigation">
+  <header class="navbar">
+    <a class="logo" href="index.html">🍦 Sweet Scoop</a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a class="active" href="categories.html">Flavours</a>
+      <a class="active" href="categories.html">Categories</a>
       <a href="contact.html">Contact</a>
-      <a class="nav-cta" href="contact.html">Get in touch ↗</a>
     </nav>
   </header>
 
   <main>
     <section class="page-banner">
-      <p class="eyebrow">A WORLD OF FLAVOUR</p>
-      <h1>Find your happy <em>scoop.</em></h1>
-      <p>From fruity favourites to chocolate dreams, there is a flavour for every mood.</p>
+      <span class="eyebrow">OUR MENU</span>
+      <h1>Discover Your Favorite Treat</h1>
+      <p>Explore our collection of delicious desserts and refreshing drinks.</p>
     </section>
 
-    <section class="catalogue section-wrap">
-      <div class="filter-buttons" aria-label="Filter ice cream flavours">
-        <button class="filter-btn active" data-filter="all" aria-pressed="true">All Flavours</button>
-        <button class="filter-btn" data-filter="fruit" aria-pressed="false">Fruit</button>
-        <button class="filter-btn" data-filter="classic" aria-pressed="false">Classics</button>
-        <button class="filter-btn" data-filter="chocolate" aria-pressed="false">Chocolate</button>
+    <section class="section">
+      <div class="filter-buttons">
+        <button class="filter-btn selected" data-filter="all">All Treats</button>
+        <button class="filter-btn" data-filter="scoop">Ice Cream</button>
+        <button class="filter-btn" data-filter="sundae">Sundaes</button>
+        <button class="filter-btn" data-filter="shake">Milkshakes</button>
       </div>
 
-      <p id="filter-status" class="filter-status" aria-live="polite">Showing all flavours</p>
-
-      <div class="product-grid catalogue-grid">
-        <article class="product-card" data-category="fruit">
-          <div class="product-image pink-bg">
-            <span class="product-badge">BESTSELLER</span>
-            <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=700&q=80" alt="Berry ice cream">
-          </div>
+      <div class="product-grid">
+        <article class="product-card" data-category="scoop">
+          <img src="https://images.unsplash.com/photo-1501446529957-6226bd447c46?auto=format&fit=crop&w=600&q=80" alt="Strawberry ice cream">
           <div class="product-info">
-            <div><h3>Berry Blush</h3><p>Fresh strawberry · Cream</p></div>
-            <strong>₹99</strong>
+            <h3>Strawberry Bliss</h3><p>Fruity and creamy scoops.</p>
+            <div class="product-bottom"><strong>₹99</strong><button class="add-btn" data-product="Strawberry Bliss" data-price="99">Add +</button></div>
           </div>
         </article>
 
-        <article class="product-card" data-category="classic">
-          <div class="product-image yellow-bg">
-            <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?auto=format&fit=crop&w=700&q=85" alt="Vanilla ice cream">
-          </div>
+        <article class="product-card" data-category="scoop">
+          <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?auto=format&fit=crop&w=600&q=80" alt="Ice cream cone">
           <div class="product-info">
-            <div><h3>Vanilla Cloud</h3><p>Vanilla · Creamy milk</p></div>
-            <strong>₹89</strong>
+            <h3>Vanilla Classic</h3><p>Smooth and timeless.</p>
+            <div class="product-bottom"><strong>₹79</strong><button class="add-btn" data-product="Vanilla Classic" data-price="79">Add +</button></div>
           </div>
         </article>
 
-        <article class="product-card" data-category="chocolate">
-          <div class="product-image purple-bg">
-            <span class="product-badge">CHOCOLATE LOVE</span>
-            <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?auto=format&fit=crop&w=700&q=85" alt="Chocolate ice cream">
-          </div>
+        <article class="product-card" data-category="scoop">
+          <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?auto=format&fit=crop&w=600&q=80" alt="Chocolate ice cream">
           <div class="product-info">
-            <div><h3>Choco Dream</h3><p>Dark cocoa · Chocolate</p></div>
-            <strong>₹109</strong>
+            <h3>Chocolate Dream</h3><p>Rich chocolate goodness.</p>
+            <div class="product-bottom"><strong>₹119</strong><button class="add-btn" data-product="Chocolate Dream" data-price="119">Add +</button></div>
           </div>
         </article>
 
-        <article class="product-card" data-category="fruit">
-          <div class="product-image yellow-bg">
-            <img src="https://images.unsplash.com/photo-1501446529957-6226bd447c46?auto=format&fit=crop&w=700&q=85" alt="Colourful ice cream scoops">
-          </div>
+        <article class="product-card" data-category="sundae">
+          <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80" alt="Ice cream sundae">
           <div class="product-info">
-            <div><h3>Mango Sunshine</h3><p>Sweet mango · Fruity</p></div>
-            <strong>₹99</strong>
+            <h3>Choco Sundae</h3><p>Ice cream with chocolate topping.</p>
+            <div class="product-bottom"><strong>₹149</strong><button class="add-btn" data-product="Choco Sundae" data-price="149">Add +</button></div>
           </div>
         </article>
 
-        <article class="product-card" data-category="chocolate">
-          <div class="product-image pink-bg">
-            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=700&q=85" alt="Rich chocolate and cream ice cream">
-          </div>
+        <article class="product-card" data-category="shake">
+          <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=600&q=80" alt="Milkshake">
           <div class="product-info">
-            <div><h3>Chocolate Swirl</h3><p>Chocolate · Cream</p></div>
-            <strong>₹119</strong>
+            <h3>Chocolate Shake</h3><p>A cool and creamy drink.</p>
+            <div class="product-bottom"><strong>₹129</strong><button class="add-btn" data-product="Chocolate Shake" data-price="129">Add +</button></div>
           </div>
         </article>
 
-        <article class="product-card" data-category="classic">
-          <div class="product-image purple-bg">
-            <img src="https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?auto=format&fit=crop&w=700&q=85" alt="Ice cream dessert">
-          </div>
+        <article class="product-card" data-category="sundae">
+          <img src="https://images.unsplash.com/photo-1488900128323-21503983a07e?auto=format&fit=crop&w=600&q=80" alt="Colorful ice cream dessert">
           <div class="product-info">
-            <div><h3>Cookie Crunch</h3><p>Cookies · Vanilla cream</p></div>
-            <strong>₹119</strong>
+            <h3>Rainbow Delight</h3><p>A colorful dessert treat.</p>
+            <div class="product-bottom"><strong>₹159</strong><button class="add-btn" data-product="Rainbow Delight" data-price="159">Add +</button></div>
           </div>
         </article>
       </div>
 
-      <div class="catalogue-note">
-        <p>💗 Found your favourite?</p>
-        <p>Contact us to ask about flavours and availability.</p>
-        <a class="button button-primary" href="contact.html">Contact Sweet Scoop →</a>
+      <div class="cart-panel">
+        <h2>🛒 Your Shopping Cart</h2>
+        <ul id="cart-items"><li>Your cart is empty.</li></ul>
+        <p class="cart-total">Total: <strong id="cart-total">₹0</strong></p>
+        <button class="btn" id="clear-cart">Clear Cart</button>
+        <p class="small-note">Demo cart only. No real order or payment is processed.</p>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a class="logo" href="index.html"><span class="logo-mark">✿</span> sweet<span>scoop</span></a>
-        <p>Small batches. Big smiles. Always a reason to celebrate. Bringing happiness to every scoop.</p>
-        <div class="social-links">
-          <a href="https://www.instagram.com/" aria-label="Instagram">ig</a>
-          <a href="https://www.facebook.com/" aria-label="Facebook">f</a>
-          <a href="https://www.pinterest.com/" aria-label="Pinterest">p</a>
-        </div>
-      </div>
-      <div class="footer-column">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">Our Story</a></li>
-          <li><a href="categories.html">Our Flavours</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Popular Flavours</h3>
-        <ul>
-          <li><a href="categories.html">🍓 Strawberry</a></li>
-          <li><a href="categories.html">🍦 Vanilla</a></li>
-          <li><a href="categories.html">🍫 Chocolate</a></li>
-          <li><a href="categories.html">🥭 Mango</a></li>
-        </ul>
-      </div>
-      <div class="footer-column footer-contact">
-        <h3>Get in Touch</h3>
-        <p>Have a sweet question? We'd love to hear from you!</p>
-        <a href="contact.html">Visit our contact page →</a>
-        <p class="footer-highlight">🍨 Happiness is homemade.</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© <span class="year"></span> Sweet Scoop. Made with love 💗</span>
-      <div class="footer-bottom-links">
-        <a href="about.html">Our Story</a>
-        <a href="contact.html">Say Hello</a>
-        <a href="categories.html">Explore Flavours</a>
-      </div>
-    </div>
+  <footer class="footer">
+    <a class="logo" href="index.html">🍦 Sweet Scoop</a>
+    <p>Serving smiles, one scoop at a time.</p>
+    <p>© <span class="year"></span> Sweet Scoop. All rights reserved.</p>
   </footer>
-
-  <script>
-    // Flavour category filters
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const flavourCards = document.querySelectorAll("[data-category]");
-    const filterStatus = document.getElementById("filter-status");
-
-    filterButtons.forEach(function(button) {
-      button.addEventListener("click", function() {
-        const selected = button.dataset.filter;
-        let visibleCount = 0;
-
-        filterButtons.forEach(function(item) {
-          const active = item === button;
-          item.classList.toggle("active", active);
-          item.setAttribute("aria-pressed", String(active));
-        });
-
-        flavourCards.forEach(function(card) {
-          const show = selected === "all" ||
-                       card.dataset.category === selected;
-
-          card.hidden = !show;
-
-          if (show) visibleCount++;
-        });
-
-        filterStatus.textContent =
-          "Showing " + visibleCount + " " +
-          (selected === "all" ? "flavours" : selected + " flavours");
-      });
-    });
-  </script>
 </body>
 </html>

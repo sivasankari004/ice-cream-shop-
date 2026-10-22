@@ -2,268 +2,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>About Us | Sweet Scoop Ice Cream</title>
-
-    <meta name="description"
-          content="Discover the story behind Sweet Scoop, your favourite destination for delicious ice cream and sweet moments.">
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Sweet Scoop</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
+  <header class="navbar">
+    <a class="logo" href="index.html">🍦 Sweet Scoop</a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a class="active" href="about.html">About</a>
+      <a href="categories.html">Categories</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <!-- Announcement Bar -->
-    <div class="announcement-bar">
-        Happiness is just one scoop away! 🍦
-    </div>
+  <main>
+    <section class="page-banner">
+      <span class="eyebrow">OUR STORY</span>
+      <h1>About Sweet Scoop</h1>
+      <p>Every scoop brings a little happiness to your day.</p>
+    </section>
 
-    <!-- Header -->
-    <header class="site-header">
-        <div class="container nav-container">
+    <section class="about-section">
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1560008581-09826d1de69e?auto=format&fit=crop&w=900&q=85" alt="Delicious ice cream">
+      </div>
+      <div class="about-content">
+        <span class="eyebrow">WELCOME TO OUR SHOP</span>
+        <h2>Our passion is making life sweeter.</h2>
+        <p>Welcome to Sweet Scoop, your happy destination for delicious ice cream, creamy milkshakes and delightful desserts.</p>
+        <p>We believe that little treats can create beautiful memories. Our menu offers classic favorites and exciting flavors for every dessert lover.</p>
+        <p>Whether you visit with friends, family or on your own, we want every scoop to bring you a smile.</p>
+        <a class="btn" href="categories.html">Explore Our Menu →</a>
+      </div>
+    </section>
 
-            <a href="index.html" class="logo">
-                🍦 Sweet Scoop
-            </a>
+    <section class="section soft-bg">
+      <div class="section-heading">
+        <span class="eyebrow">WHY CHOOSE US?</span>
+        <h2>Our Sweet Promises</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon">🍓</div>
+          <h3>Delicious Flavors</h3>
+          <p>Explore fruity, chocolatey and creamy favorites.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">💗</div>
+          <h3>Made with Care</h3>
+          <p>We care about quality, presentation and service.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">😊</div>
+          <h3>Happy Customers</h3>
+          <p>We make every visit warm, welcoming and memorable.</p>
+        </article>
+      </div>
+    </section>
+  </main>
 
-            <nav class="main-nav" id="main-nav">
-                <a href="index.html">Home</a>
-                <a href="about.html" class="active">About</a>
-                <a href="categories.html">Flavours</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-
-            <a href="categories.html" class="btn btn-primary header-btn">
-                Explore Flavours
-            </a>
-
-            <button class="menu-toggle"
-                    id="menu-toggle"
-                    aria-label="Toggle navigation"
-                    aria-expanded="false">
-                ☰
-            </button>
-
-        </div>
-    </header>
-
-    <main>
-
-        <!-- About Banner -->
-        <section class="page-banner">
-            <div class="container">
-                <p class="eyebrow">OUR STORY</p>
-                <h1>A Little Scoop of Happiness</h1>
-                <p>
-                    Every flavour has a story, and every scoop brings
-                    a little more joy into your day.
-                </p>
-            </div>
-        </section>
-
-        <!-- Our Story -->
-        <section class="about-intro section-padding">
-            <div class="container about-grid">
-
-                <div class="about-image">
-                    <img
-                        src="https://images.unsplash.com/photo-1560008581-09826d1de69e?auto=format&fit=crop&w=900&q=85"
-                        alt="Delicious ice cream cones"
-                        loading="lazy">
-                </div>
-
-                <div class="about-content">
-                    <p class="eyebrow">WELCOME TO SWEET SCOOP</p>
-
-                    <h2>Made with Love, Served with a Smile</h2>
-
-                    <p>
-                        At Sweet Scoop, we believe that ice cream is more
-                        than a dessert. It is a reason to celebrate,
-                        share a smile, and create beautiful memories.
-                    </p>
-
-                    <p>
-                        Our dream is to make every visit special with
-                        delightful flavours, a welcoming atmosphere,
-                        and sweet treats for every occasion.
-                    </p>
-
-                    <p>
-                        From timeless vanilla to rich chocolate and
-                        refreshing fruit flavours, there is always
-                        something delicious waiting for you.
-                    </p>
-
-                    <a href="categories.html" class="btn btn-primary">
-                        Discover Our Flavours
-                    </a>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Mission and Vision -->
-        <section class="values-section section-padding">
-            <div class="container">
-
-                <div class="section-heading">
-                    <p class="eyebrow">WHAT MAKES US SPECIAL</p>
-                    <h2>Our Mission & Vision</h2>
-                    <p>
-                        Sweet moments begin with a simple scoop.
-                    </p>
-                </div>
-
-                <div class="values-grid">
-
-                    <article class="value-card">
-                        <div class="value-icon">💗</div>
-                        <h3>Our Mission</h3>
-                        <p>
-                            To bring happiness to every customer through
-                            delicious ice cream, friendly service,
-                            and memorable experiences.
-                        </p>
-                    </article>
-
-                    <article class="value-card">
-                        <div class="value-icon">🌈</div>
-                        <h3>Our Vision</h3>
-                        <p>
-                            To become a favourite destination for ice cream
-                            lovers by making every flavour a celebration
-                            of joy and togetherness.
-                        </p>
-                    </article>
-
-                    <article class="value-card">
-                        <div class="value-icon">🍓</div>
-                        <h3>Our Promise</h3>
-                        <p>
-                            To offer a delightful variety of flavours,
-                            a welcoming experience, and sweet memories
-                            with every visit.
-                        </p>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Why Choose Us -->
-        <section class="why-choose section-padding">
-            <div class="container">
-
-                <div class="section-heading">
-                    <p class="eyebrow">WHY SWEET SCOOP?</p>
-                    <h2>There's More to Love</h2>
-                </div>
-
-                <div class="features-grid">
-
-                    <article class="feature-card">
-                        <div class="feature-icon">🍨</div>
-                        <h3>Delicious Variety</h3>
-                        <p>
-                            Explore classic favourites, fruity delights,
-                            and chocolate-inspired creations.
-                        </p>
-                    </article>
-
-                    <article class="feature-card">
-                        <div class="feature-icon">✨</div>
-                        <h3>Made for Happy Moments</h3>
-                        <p>
-                            The perfect sweet treat for family time,
-                            celebrations, and everyday smiles.
-                        </p>
-                    </article>
-
-                    <article class="feature-card">
-                        <div class="feature-icon">😊</div>
-                        <h3>Friendly Experience</h3>
-                        <p>
-                            We want every visit to feel welcoming,
-                            enjoyable, and full of sweetness.
-                        </p>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Call to Action -->
-        <section class="about-cta section-padding">
-            <div class="container">
-                <p class="eyebrow">YOUR NEXT FAVOURITE FLAVOUR AWAITS</p>
-
-                <h2>Life Is Better with Ice Cream!</h2>
-
-                <p>
-                    Find your favourite flavour and make today a little sweeter.
-                </p>
-
-                <a href="categories.html" class="btn btn-primary">
-                    View All Flavours
-                </a>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container footer-grid">
-
-            <div class="footer-brand">
-                <a href="index.html" class="logo">🍦 Sweet Scoop</a>
-
-                <p>
-                    Spreading happiness, one delicious scoop at a time.
-                    Come for the flavours, stay for the smiles!
-                </p>
-            </div>
-
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="categories.html">Our Flavours</a>
-                <a href="contact.html">Contact</a>
-            </div>
-
-            <div class="footer-column">
-                <h3>Popular Flavours</h3>
-                <a href="categories.html">Chocolate</a>
-                <a href="categories.html">Vanilla</a>
-                <a href="categories.html">Strawberry</a>
-                <a href="categories.html">Mango</a>
-            </div>
-
-            <div class="footer-column">
-                <h3>Get in Touch</h3>
-                <p>📧 hello@sweetscoop.example</p>
-                <p>📍 Your City, India</p>
-                <p>🕒 Daily: 10 AM – 10 PM</p>
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-            <p>
-                &copy; <span id="current-year"></span> Sweet Scoop.
-                All rights reserved.
-            </p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-
+  <footer class="footer">
+    <a class="logo" href="index.html">🍦 Sweet Scoop</a>
+    <p>Serving smiles, one scoop at a time.</p>
+    <p>© <span class="year"></span> Sweet Scoop. All rights reserved.</p>
+  </footer>
 </body>
 </html>

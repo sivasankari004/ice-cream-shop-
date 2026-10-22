@@ -4,206 +4,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact Sweet Scoop for ice cream enquiries and flavour information.">
-  <title>Contact Us | Sweet Scoop</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <title>Contact | Sweet Scoop</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-
-  <div class="announcement">A little scoop of happiness, delivered to your door 🍦</div>
-
-  <header class="site-header">
-    <a class="logo" href="index.html"><span class="logo-mark">✿</span> sweet<span>scoop</span></a>
-    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-    <nav class="nav-links" aria-label="Main navigation">
+  <header class="navbar">
+    <a class="logo" href="index.html">🍦 Sweet Scoop</a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="categories.html">Flavours</a>
+      <a href="categories.html">Categories</a>
       <a class="active" href="contact.html">Contact</a>
-      <a class="nav-cta" href="categories.html">Explore scoops ↗</a>
     </nav>
   </header>
 
   <main>
     <section class="page-banner">
-      <p class="eyebrow">WE'D LOVE TO HEAR FROM YOU</p>
-      <h1>Let's have a <em>sweet chat.</em></h1>
-      <p>Questions about flavours or just want to say hello? Send us a message!</p>
+      <span class="eyebrow">GET IN TOUCH</span>
+      <h1>Contact Sweet Scoop</h1>
+      <p>Have a question or suggestion? We would love to hear from you.</p>
     </section>
 
-    <section class="contact-layout section-wrap">
-
-      <!-- Contact Details -->
+    <section class="contact-section">
       <div class="contact-details">
-        <p class="eyebrow">GET IN TOUCH</p>
-        <h2>We're here to <em>help.</em></h2>
-        <p class="contact-intro">
-          Have a question about our ice cream? Fill out the form
-          and let us know how we can help.
-        </p>
+        <span class="eyebrow">SAY HELLO</span>
+        <h2>Let's make your day sweeter.</h2>
+        <p>Contact us for menu enquiries, feedback and general questions.</p>
 
-        <div class="contact-info-card">
-          <span class="contact-icon">💌</span>
-          <div>
-            <h3>Email</h3>
-            <p>Use our message form to send an enquiry.</p>
-          </div>
+        <div class="contact-item">
+          <span>📍</span>
+          <div><h3>Our Location</h3><p>Enter your shop address here.</p></div>
         </div>
-
-        <div class="contact-info-card">
-          <span class="contact-icon">🍦</span>
-          <div>
-            <h3>Flavours</h3>
-            <p>Explore our collection and ask about availability.</p>
-            <a href="categories.html">View flavours →</a>
-          </div>
+        <div class="contact-item">
+          <span>📧</span>
+          <div><h3>Email Address</h3><p>hello@sweetscoop.example</p></div>
         </div>
-
-        <div class="contact-info-card">
-          <span class="contact-icon">🕒</span>
-          <div>
-            <h3>Opening Hours</h3>
-            <p>Monday – Sunday</p>
-            <p>Hours to be confirmed by Sweet Scoop.</p>
-          </div>
-        </div>
-
-        <div class="contact-sweet-note">
-          <span>🍨</span>
-          <p>Every great conversation deserves a little sweetness!</p>
+        <div class="contact-item">
+          <span>🕒</span>
+          <div><h3>Opening Hours</h3><p>Monday – Sunday: 10 AM – 9 PM</p></div>
         </div>
       </div>
 
-      <!-- Contact Form -->
-      <div class="contact-form-card">
-        <h2>Send us a message</h2>
-        <p>Complete the form below.</p>
+      <form class="contact-form" id="contact-form">
+        <h2>Send Us a Message</h2>
 
-        <form id="contact-form">
-          <div class="form-group">
-            <label for="contact-name">Your name</label>
-            <input
-              type="text"
-              id="contact-name"
-              name="name"
-              placeholder="Enter your name"
-              autocomplete="name"
-              required>
-          </div>
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text" placeholder="Enter your name" required>
 
-          <div class="form-group">
-            <label for="contact-email">Email address</label>
-            <input
-              type="email"
-              id="contact-email"
-              name="email"
-              placeholder="you@example.com"
-              autocomplete="email"
-              required>
-          </div>
+        <label for="email">Email Address</label>
+        <input id="email" name="email" type="email" placeholder="Enter your email" required>
 
-          <div class="form-group">
-            <label for="contact-subject">Subject</label>
-            <select id="contact-subject" name="subject" required>
-              <option value="">Choose a subject</option>
-              <option value="Flavour enquiry">Flavour enquiry</option>
-              <option value="Product availability">Product availability</option>
-              <option value="Feedback">Feedback</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" type="text" placeholder="Enter the subject" required>
 
-          <div class="form-group">
-            <label for="contact-message">Your message</label>
-            <textarea
-              id="contact-message"
-              name="message"
-              rows="5"
-              placeholder="Write your message here..."
-              required></textarea>
-          </div>
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
 
-          <button type="submit" class="button button-primary contact-submit">
-            Send Message →
-          </button>
-
-          <p id="contact-status" class="form-message" aria-live="polite"></p>
-        </form>
-      </div>
-
+        <button class="btn" type="submit">Send Message →</button>
+        <p id="form-message" role="status" aria-live="polite"></p>
+        <p class="small-note">Demo form only. Connect a backend to receive real messages.</p>
+      </form>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a class="logo" href="index.html"><span class="logo-mark">✿</span> sweet<span>scoop</span></a>
-        <p>Small batches. Big smiles. Always a reason to celebrate. Bringing happiness to every scoop.</p>
-        <div class="social-links">
-          <a href="https://www.instagram.com/" aria-label="Instagram">ig</a>
-          <a href="https://www.facebook.com/" aria-label="Facebook">f</a>
-          <a href="https://www.pinterest.com/" aria-label="Pinterest">p</a>
-        </div>
-      </div>
-      <div class="footer-column">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">Our Story</a></li>
-          <li><a href="categories.html">Our Flavours</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h3>Popular Flavours</h3>
-        <ul>
-          <li><a href="categories.html">🍓 Strawberry</a></li>
-          <li><a href="categories.html">🍦 Vanilla</a></li>
-          <li><a href="categories.html">🍫 Chocolate</a></li>
-          <li><a href="categories.html">🥭 Mango</a></li>
-        </ul>
-      </div>
-      <div class="footer-column footer-contact">
-        <h3>Get in Touch</h3>
-        <p>Have a sweet question? We'd love to hear from you!</p>
-        <a href="contact.html">Visit our contact page →</a>
-        <p class="footer-highlight">🍨 Happiness is homemade.</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© <span class="year"></span> Sweet Scoop. Made with love 💗</span>
-      <div class="footer-bottom-links">
-        <a href="about.html">Our Story</a>
-        <a href="contact.html">Say Hello</a>
-        <a href="categories.html">Explore Flavours</a>
-      </div>
-    </div>
+  <footer class="footer">
+    <a class="logo" href="index.html">🍦 Sweet Scoop</a>
+    <p>Serving smiles, one scoop at a time.</p>
+    <p>© <span class="year"></span> Sweet Scoop. All rights reserved.</p>
   </footer>
-
-  <script>
-    // Front-end contact form demonstration
-    const contactForm = document.getElementById("contact-form");
-    const contactStatus = document.getElementById("contact-status");
-
-    if (contactForm && contactStatus) {
-      contactForm.addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        if (!contactForm.checkValidity()) {
-          contactForm.reportValidity();
-          return;
-        }
-
-        contactStatus.textContent =
-          "Thank you for your message! 💗 This demo does not send messages yet.";
-
-        contactForm.reset();
-      });
-    }
-  </script>
 </body>
 </html>

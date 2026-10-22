@@ -1,169 +1,55 @@
-
-/* ========================================
-   SWEET SCOOP - WEBSITE JAVASCRIPT
-======================================== */
-
-document.addEventListener("DOMContentLoaded", function () {
-
-  // 1. Automatic Copyright Year
-  document.querySelectorAll(".year").forEach(function (element) {
-    element.textContent = new Date().getFullYear();
-  });
-
-
-  // 2. Mobile Navigation Toggle
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navLinks = document.querySelector(".nav-links");
-
-  if (menuToggle && navLinks) {
-
-    menuToggle.addEventListener("click", function () {
-      const isOpen = navLinks.classList.toggle("open");
-
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
-      menuToggle.setAttribute(
-        "aria-label",
-        isOpen ? "Close navigation" : "Open navigation"
-      );
-
-      menuToggle.textContent = isOpen ? "✕" : "☰";
+document.addEventListener("DOMContentLoaded", () => {
+  // Mobile navigation
+  const menuButton = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".nav-links");
+  if (menuButton && nav) {
+    menuButton.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.textContent = isOpen ? "×" : "☰";
     });
+    nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+      nav.classList.remove("open");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.textContent = "☰";
+    }));
+  }
 
-    // Close the menu after selecting a link
-    navLinks.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        navLinks.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open navigation");
-        menuToggle.textContent = "☰";
+  // Current year in all footers
+  document.querySelectorAll(".year").forEach(el => el.textContent = new Date().getFullYear());
+
+  // Category filter
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll(".catalog-card");
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter;
+      filterButtons.forEach(item => item.classList.toggle("active", item === button));
+      cards.forEach(card => {
+        card.classList.toggle("hidden", filter !== "all" && card.dataset.category !== filter);
       });
     });
+  });
 
-    // Close the menu when clicking outside it
-    document.addEventListener("click", function (event) {
-      if (
-        !navLinks.contains(event.target) &&
-        !menuToggle.contains(event.target)
-      ) {
-        navLinks.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open navigation");
-        menuToggle.textContent = "☰";
-      }
-    });
-
-    // Close the menu when switching to desktop width
-    window.addEventListener("resize", function () {
-      if (window.innerWidth > 760) {
-        navLinks.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open navigation");
-        menuToggle.textContent = "☰";
-      }
+  // Contact form demo: validates inputs and shows a friendly confirmation.
+  const contactForm = document.querySelector("#contact-form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", event => {
+      event.preventDefault();
+      const message = contactForm.querySelector(".form-message");
+      message.textContent = "Thanks for reaching out! This demo form is working in your browser, but needs a backend to send your message.";
+      contactForm.reset();
     });
   }
 
-
-  // 3. Newsletter Form
-  const newsletterForm = document.getElementById("newsletter-form");
-
+  // Newsletter demo
+  const newsletterForm = document.querySelector("#newsletter-form");
   if (newsletterForm) {
-    const emailInput = document.getElementById("newsletter-email");
-    const formMessage = newsletterForm.querySelector(".form-message");
-    const submitButton = newsletterForm.querySelector(
-      'button[type="submit"]'
-    );
-
-    newsletterForm.addEventListener("submit", function (event) {
+    newsletterForm.addEventListener("submit", event => {
       event.preventDefault();
-
-      if (!emailInput || !emailInput.checkValidity()) {
-        if (emailInput) {
-          emailInput.reportValidity();
-        }
-        return;
-      }
-
-      if (formMessage) {
-        formMessage.textContent =
-          "Thank you for your interest in Sweet Scoop! 🍦 " +
-          "This demo form does not send subscriptions yet.";
-        formMessage.setAttribute("role", "status");
-      }
-
-      if (submitButton) {
-        submitButton.textContent = "Thank you! ♥";
-      }
-
+      const message = newsletterForm.querySelector(".form-message");
+      message.textContent = "You're on the list! (Demo only — connect an email service for real subscriptions.)";
       newsletterForm.reset();
     });
-
-    if (emailInput && formMessage) {
-      emailInput.addEventListener("input", function () {
-        formMessage.textContent = "";
-
-        if (submitButton) {
-          submitButton.textContent = "Count me in →";
-        }
-      });
-    }
   }
-
-
-  // 4. Smooth Scrolling for Same-Page Links
-  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-    link.addEventListener("click", function (event) {
-      const targetId = link.getAttribute("href");
-
-      if (!targetId || targetId === "#") {
-        return;
-      }
-
-      const target = document.querySelector(targetId);
-
-      if (target) {
-        event.preventDefault();
-
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-      }
-    });
-  });
-
-
-  // 5. Simple Scroll Reveal Animation
-  const revealElements = document.querySelectorAll(
-    ".benefit, .product-card, .story-copy, " +
-    ".quote-section, .newsletter"
-  );
-
-  if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(
-      function (entries, currentObserver) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            currentObserver.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.12
-      }
-    );
-
-    revealElements.forEach(function (element) {
-      element.classList.add("reveal");
-      observer.observe(element);
-    });
-  }
-
-
-  // 6. Footer Social Link Safety
-  document.querySelectorAll(".social-links a").forEach(function (link) {
-    link.setAttribute("rel", "noopener noreferrer");
-  });
-
 });
